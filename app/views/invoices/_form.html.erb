@@ -1,0 +1,31 @@
+<%= form_for @invoice, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Invoice</legend>
+
+    <div class="control-group">
+      <%= f.label :date, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.date_select :date, :class => 'date_select' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :client_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :client_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :folio_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :folio_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', invoices_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

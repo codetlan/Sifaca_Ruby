@@ -1,0 +1,77 @@
+<h1>Client</h1>
+
+<p>
+  <b>Name</b><br>
+  <%= @clients.name %>
+</p>
+
+<p>
+  <b>Rfc</b><br>
+  <%= @clients.rfc %>
+</p>
+
+<p>
+  <b>Street</b><br>
+  <%= @clients.street %>
+</p>
+
+<p>
+  <b>Num ext</b><br>
+  <%= @clients.num_ext %>
+</p>
+
+<p>
+  <b>Num int</b><br>
+  <%= @clients.num_int %>
+</p>
+
+<p>
+  <b>Colony</b><br>
+  <%= @clients.colony %>
+</p>
+
+<p>
+  <b>Delegation</b><br>
+  <%= @clients.delegation %>
+</p>
+
+<p>
+  <b>State</b><br>
+  <%= @clients.state %>
+</p>
+
+<p>
+  <b>Cp</b><br>
+  <%= @clients.cp %>
+</p>
+
+<p>
+  <b>Logo emp</b><br>
+  <%= @clients.logo_emp %>
+</p>
+
+<p>
+  <b>Qr</b><br>
+  <%= @clients.qr %>
+</p>
+
+<p>
+  <b>Username</b><br>
+  <%= @clients.username %>
+</p>
+
+<p>
+  <b>Password</b><br>
+  <%= @clients.password %>
+</p>
+
+<p>
+  <b>Email</b><br>
+  <%= @clients.email %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', clients_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_clients_path(@client), :class => 'btn' %>
+  <%= link_to 'Delete', clients_path(@client), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

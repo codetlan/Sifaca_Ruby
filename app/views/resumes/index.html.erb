@@ -1,0 +1,26 @@
+<h1>Resumes</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Iva</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resumes.each do |resume| %>
+      <tr>
+        <td><%= resume.id %></td>
+        <td><%= link_to resume.iva, resume_path(resume) %></td>
+        <td><%= resume.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_resume_path(resume), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', resume_path(resume), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_resume_path, :class => 'btn btn-primary' %>

@@ -1,0 +1,31 @@
+<%= form_for @folio, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Folio</legend>
+
+    <div class="control-group">
+      <%= f.label :client_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :client_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :folio, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :folio, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :status, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :status, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', folios_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

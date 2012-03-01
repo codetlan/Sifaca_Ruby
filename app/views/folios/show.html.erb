@@ -1,0 +1,22 @@
+<h1>Folio</h1>
+
+<p>
+  <b>Client</b><br>
+  <%= @folio.client_id %>
+</p>
+
+<p>
+  <b>Folio</b><br>
+  <%= @folio.folio %>
+</p>
+
+<p>
+  <b>Status</b><br>
+  <%= @folio.status %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', folios_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_folio_path(@folio), :class => 'btn' %>
+  <%= link_to 'Delete', folio_path(@folio), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

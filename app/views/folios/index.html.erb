@@ -1,0 +1,26 @@
+<h1>Folios</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Client</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @folios.each do |folio| %>
+      <tr>
+        <td><%= folio.id %></td>
+        <td><%= link_to folio.client_id, folio_path(folio) %></td>
+        <td><%= folio.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_folio_path(folio), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', folio_path(folio), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_folio_path, :class => 'btn btn-primary' %>
