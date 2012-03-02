@@ -1,4 +1,6 @@
 Sifaca::Application.routes.draw do
+  get "index/index"
+
   devise_for :clients
 
   resources :resumes
@@ -9,9 +11,9 @@ Sifaca::Application.routes.draw do
 
   resources :folios
 
-  resource :clients
+  resources :clients
 
-  root :to => 'clients#index'
+  root :to => 'index#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -21,7 +23,7 @@ Sifaca::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+   match 'index/dashboard' => 'index#dashboard', :as => :dashboard
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):

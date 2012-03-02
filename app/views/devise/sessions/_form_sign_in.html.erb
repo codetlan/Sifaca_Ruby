@@ -1,0 +1,11 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= f.email_field :email, :placeholder => "Introduce tu email" %>
+
+    <%= f.password_field :password, :placeholder => "Contraseña" %>
+
+    <% #if devise_mapping.rememberable? -%>
+        <div><%= f.check_box :remember_me %>&nbsp;Recuerdame</div>
+    <% #end -%>
+
+    <%= f.submit "Ingresa", :class => 'btn btn-primary' %>
+<% end %>

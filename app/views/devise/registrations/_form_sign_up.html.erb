@@ -1,0 +1,11 @@
+<%= form_for(resource, :as => resource_name, :remote =>true,:format => :json, :url => registration_path(resource_name)) do |f| %>
+
+  <%= f.email_field :email, :placeholder => "Introduce tu email" %>
+
+  <%= f.password_field :password, :placeholder => "Introduce tu contraseña" %>
+
+  <%= f.password_field :password_confirmation, :placeholder => "Vuelve escribir tu contraseña" %>
+
+  <%= f.submit "Regístrate", :class => 'btn btn-primary' %>
+<% end %>
+
