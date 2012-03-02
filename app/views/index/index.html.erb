@@ -1,0 +1,19 @@
+<%= render :partial => "shared/tbar_index" %>
+<div id="user_nav">
+  <% if client_signed_in? %>
+
+      <%= link_to "Sign out", destroy_client_session_path, :method => :delete %>
+  <% else %>
+      <div id="error" style="left: 50%; margin-left: -258px; padding: 0; position: absolute;"></div>
+      <div style="width: 900px; margin: 0 auto; padding: 100px 0;">
+        <ul class="thumbnails row" style="margin: 0 auto;">
+          <li class="thumbnail span3 hero-unit" style="height: 140px">
+            <%= render :partial => "devise/sessions/form_sign_in" %>
+          </li>
+          <li class="thumbnail span3 hero-unit" style="height: 140px">
+            <%= render :partial => "devise/registrations/form_sign_up" %>
+          </li>
+        </ul>
+      </div>
+  <% end %>
+</div>
