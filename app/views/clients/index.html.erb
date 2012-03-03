@@ -13,16 +13,17 @@
   <% @clients.each do |client| %>
       <tr>
         <td><%= client.id %></td>
-        <td><%= link_to client.name, clients_path(client) %></td>
-        <td><%= link_to client.rfc, clients_path(client) %></td>
-        <td><%= link_to client.street, clients_path(client) %></td>
+        <td><%= link_to client.name, client_path(client) %></td>
+        <td><%= link_to client.rfc, client_path(client) %></td>
+        <td><%= link_to client.street, client_path(client) %></td>
         <td>
-          <%= link_to 'Edit', edit_clients_path(client), :class => 'btn btn-mini' %>
-          <%= link_to 'Destroy', clients_path(client), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+          <%= link_to 'Show', client_path(client), :class => 'btn btn-mini' %>
+          <%= link_to 'Edit', edit_client_path(client), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', client_path(client), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
   <% end %>
   </tbody>
 </table>
 
-<%= link_to 'New', new_clients_path, :class => 'btn btn-primary' %>
+<%= link_to 'New', new_client_path, :class => 'btn btn-primary' %>

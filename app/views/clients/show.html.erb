@@ -2,76 +2,76 @@
 
 <p>
   <b>Name</b><br>
-  <%= @clients.name %>
+  <%= @client.name %>
 </p>
 
 <p>
   <b>Rfc</b><br>
-  <%= @clients.rfc %>
+  <%= @client.rfc %>
 </p>
 
 <p>
   <b>Street</b><br>
-  <%= @clients.street %>
+  <%= @client.street %>
 </p>
 
 <p>
   <b>Num ext</b><br>
-  <%= @clients.num_ext %>
+  <%= @client.num_ext %>
 </p>
 
 <p>
   <b>Num int</b><br>
-  <%= @clients.num_int %>
+  <%= @client.num_int %>
 </p>
 
 <p>
   <b>Colony</b><br>
-  <%= @clients.colony %>
+  <%= @client.colony %>
 </p>
 
 <p>
   <b>Delegation</b><br>
-  <%= @clients.delegation %>
+  <%= @client.delegation %>
 </p>
 
 <p>
   <b>State</b><br>
-  <%= @clients.state %>
+  <%= @client.state %>
 </p>
 
 <p>
   <b>Cp</b><br>
-  <%= @clients.cp %>
+  <%= @client.cp %>
 </p>
 
 <p>
   <b>Logo emp</b><br>
-  <%= @clients.logo_emp %>
+  <%= @client.logo_emp %>
 </p>
 
 <p>
   <b>Qr</b><br>
-  <%= @clients.qr %>
+  <%= @client.qr %>
 </p>
 
 <p>
   <b>Username</b><br>
-  <%= @clients.username %>
+  <%= @client.username %>
 </p>
 
 <p>
   <b>Password</b><br>
-  <%= @clients.password %>
+  <%= @client.password %>
 </p>
 
 <p>
   <b>Email</b><br>
-  <%= @clients.email %>
+  <%= @client.email %>
 </p>
 
 <div class="form-actions">
   <%= link_to 'Back', clients_path, :class => 'btn'  %>
-  <%= link_to 'Edit', edit_clients_path(@client), :class => 'btn' %>
-  <%= link_to 'Delete', clients_path(@client), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+  <%= link_to 'Edit', edit_client_path(@client), :class => 'btn' %>
+  <%= link_to 'Delete', client_path(@client), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
 </div>
