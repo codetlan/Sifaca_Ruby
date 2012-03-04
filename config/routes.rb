@@ -13,6 +13,8 @@ Sifaca::Application.routes.draw do
 
   resources :clients
 
+  match "devise/sessions#new", :to => 'index#index'
+
   root :to => 'index#index'
 
   # The priority is based upon order of creation:

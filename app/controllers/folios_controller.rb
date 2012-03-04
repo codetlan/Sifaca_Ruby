@@ -1,4 +1,5 @@
 class FoliosController < ApplicationController
+  before_filter :authenticate_client!
   # GET /folios
   # GET /folios.json
   def index

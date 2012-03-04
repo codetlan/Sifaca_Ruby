@@ -1,4 +1,5 @@
 class ResumesController < ApplicationController
+  before_filter :authenticate_client!
   # GET /resumes
   # GET /resumes.json
   def index

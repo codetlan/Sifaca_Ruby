@@ -2,6 +2,6 @@
   <a class="close" data-dismiss="alert">×</a>
   <h4 class="alert-heading">Warning!</h4>
   <%  resource.errors.each do |error,value| %>
-      <%= error.to_s + value.to_s %>
+      <%= error.to_s.camelize %> <%=value.to_s %> <br>
   <% end %>
 </div>
