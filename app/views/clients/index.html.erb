@@ -4,6 +4,7 @@
   <tr>
     <th>ID</th>
     <th>Name</th>
+    <th>Logo</th>
     <th>RFC</th>
     <th>Street</th>
     <th>Actions</th>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= client.id %></td>
         <td><%= link_to client.name, client_path(client) %></td>
+        <td><%= image_tag client.logo_emp_url(:thumb).to_s %></td>
         <td><%= link_to client.rfc, client_path(client) %></td>
         <td><%= link_to client.street, client_path(client) %></td>
         <td>

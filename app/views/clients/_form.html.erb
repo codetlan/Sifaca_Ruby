@@ -1,4 +1,4 @@
-<%= form_for @client, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @client, :html => {:multipart => true, :class => 'form-horizontal' } do |f| %>
     <fieldset>
       <legend><%= controller.action_name.capitalize %> Client</legend>
 
@@ -68,7 +68,7 @@
       <div class="control-group">
         <%= f.label :logo_emp, :class => 'control-label' %>
         <div class="controls">
-          <%= f.text_field :logo_emp, :class => 'text_field' %>
+          <%= f.file_field :logo_emp, :class => 'text_field' %>
         </div>
       </div>
 

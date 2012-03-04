@@ -1,4 +1,9 @@
 class Client < ActiveRecord::Base
+  belongs_to :client
+  has_many :invoices
+  has_many :folios
+  mount_uploader :logo_emp, LogoEmpUploader
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

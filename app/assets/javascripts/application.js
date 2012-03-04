@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+validarCamposLogin = function(){
+    var l,p;
+    l=$('#login').val();
+    p=$('#pass').val();
+
+    if(l===''&&p===''){
+        alert('faltan campos');
+    }
+    else{
+        alert('listo');
+    }
+
+    return false;
+
+
+}

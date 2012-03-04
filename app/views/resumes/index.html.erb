@@ -2,18 +2,29 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Iva</th>
-      <th>Created at</th>
-      <th>Actions</th>
+      <th>Factura</th>
+      <th>Cliente</th>
+      <th>RFC</th>
+      <th>Subtotal</th>
+      <th>IVA</th>
+      <th>Total</th>
+      <th>Tipo Pago</th>
+      <th>Fecha Pago</th>
+      <th>Tipo Venta</th>
     </tr>
   </thead>
   <tbody>
     <% @resumes.each do |resume| %>
       <tr>
-        <td><%= resume.id %></td>
-        <td><%= link_to resume.iva, resume_path(resume) %></td>
+        <td><%= resume.invoice_id %></td>
+        <td><%= Client.find(Invoice.find(resume.invoice_id).client_id).name %></td>
+        <td><%= Client.find(resume.invoice_id).rfc %></td>
+        <td><%= resume.subtotal %></td>
+        <td><%= resume.iva %></td>
+        <td><%= resume.total %></td>
+        <td><%= resume.payment_condition %></td>
         <td><%= resume.created_at %></td>
+        <td><%= resume.receipt %></td>
         <td>
           <%= link_to 'Edit', edit_resume_path(resume), :class => 'btn btn-mini' %>
           <%= link_to 'Destroy', resume_path(resume), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
@@ -22,5 +33,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to 'New', new_resume_path, :class => 'btn btn-primary' %>
