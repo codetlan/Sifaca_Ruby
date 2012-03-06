@@ -26,6 +26,7 @@ Sifaca::Application.routes.draw do
 
   # Sample of named route:
    match 'index/dashboard' => 'index#dashboard', :as => :dashboard
+   match 'clients/form_user' => 'clients#form_user', :as => :form_user
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):

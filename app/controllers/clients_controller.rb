@@ -1,6 +1,10 @@
 class ClientsController < ApplicationController
   before_filter :authenticate_client!
 
+  def form_user
+
+  end
+
   # GET /clients
   # GET /clients.json
   def index

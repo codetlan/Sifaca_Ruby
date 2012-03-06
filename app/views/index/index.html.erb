@@ -1,5 +1,6 @@
 <%= render :partial => "shared/tbar_index" %>
 <div id="user_nav">
+
   <% if client_signed_in? %>
 
       <%= link_to "Sign out", destroy_client_session_path, :method => :delete %>

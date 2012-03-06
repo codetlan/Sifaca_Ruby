@@ -1,0 +1,9 @@
+<div id="modal-form-<%= @formName%>" class="modal hide fade">
+  <div class="modal-header">
+    <a href="#" class="close">&times;</a>
+    <h3><%= @formName.upcase%></h3>
+  </div>
+  <div id="<%= @formName%>-form">
+    <%= render :partial => @formName+"/form" %>
+  </div>
+</div>
