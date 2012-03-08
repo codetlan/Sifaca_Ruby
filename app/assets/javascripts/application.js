@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-validarCamposLogin = function(){
+/*validarCamposLogin = function(){
     var l,p;
     l=$('#login').val();
     p=$('#pass').val();
@@ -31,4 +31,4 @@ validarCamposLogin = function(){
     return false;
 
 
-}
+}   */

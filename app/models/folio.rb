@@ -1,5 +1,5 @@
 class Folio < ActiveRecord::Base
   belongs_to :client
-  has_one :invoice
-  has_one :client
+  belongs_to :invoice
+
 end

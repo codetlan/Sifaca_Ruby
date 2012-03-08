@@ -26,13 +26,13 @@
 </p>
 
 <p>
-  <b>Colony</b><br>
-  <%= @client.colony %>
+  <b>Suburb</b><br>
+  <%= @client.suburb %>
 </p>
 
 <p>
-  <b>Delegation</b><br>
-  <%= @client.delegation %>
+  <b>Township</b><br>
+  <%= @client.township %>
 </p>
 
 <p>
@@ -47,7 +47,7 @@
 
 <p>
   <b>Logo emp</b><br>
-  <%=image_tag @client.logo_emp_url(:thumb).to_s %>
+  <%= @client.logo_emp %>
 </p>
 
 <p>
@@ -56,18 +56,8 @@
 </p>
 
 <p>
-  <b>Username</b><br>
-  <%= @client.username %>
-</p>
-
-<p>
-  <b>Password</b><br>
-  <%= @client.password %>
-</p>
-
-<p>
-  <b>Email</b><br>
-  <%= @client.email %>
+  <b>Id user</b><br>
+  <%= @client.id_user %>
 </p>
 
 <div class="form-actions">

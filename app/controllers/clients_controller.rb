@@ -1,10 +1,4 @@
 class ClientsController < ApplicationController
-  before_filter :authenticate_client!
-
-  def form_user
-
-  end
-
   # GET /clients
   # GET /clients.json
   def index
@@ -13,6 +7,7 @@ class ClientsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @clients }
+      format.js
     end
   end
 
@@ -27,8 +22,8 @@ class ClientsController < ApplicationController
     end
   end
 
-  # GET /client/new
-  # GET /client/new.json
+  # GET /clients/new
+  # GET /clients/new.json
   def new
     @client = Client.new
 
@@ -82,7 +77,7 @@ class ClientsController < ApplicationController
     @client.destroy
 
     respond_to do |format|
-      format.html { redirect_to client_url }
+      format.html { redirect_to clients_url }
       format.json { head :no_content }
     end
   end

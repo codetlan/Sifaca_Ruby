@@ -1,12 +1,13 @@
-<%= form_for(resource, :as => resource_name, :remote =>true,:format => :json, :url => session_path(resource_name)) do |f| %>
-
+<%= form_for(resource, :as => resource_name, :remote =>true,
+             :format => :json, :url => session_path(resource_name)) do |f| %>
     <%= f.email_field :email, :placeholder => "Introduce tu email" ,:id =>'login'%>
 
     <%= f.password_field :password, :placeholder => "Contraseña", :id =>'pass' %>
 
-    <% #if devise_mapping.rememberable? -%>
+    <!-- if devise_mapping.rememberable? %> -->
         <div><%= f.check_box :remember_me %>&nbsp;Recuerdame</div>
-    <% #end -%>
+    <!-- < end %>  -->
 
-    <%= f.submit "Ingresa", :class => 'btn btn-primary', :action =>'' %>
+    <%= f.submit "Ingresa", :class => 'btn btn-primary' %>
+
 <% end %>

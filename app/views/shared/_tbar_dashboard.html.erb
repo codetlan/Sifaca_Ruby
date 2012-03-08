@@ -2,13 +2,14 @@
     <div class="container">
       <div class="span" style="color: #999; font-size: 2em;">Codetlan</div>
       <div class="span" style="color: #999; font-size: 2em;">
-        <button data-controls-modal="modal-form-<%= @formName %>" data-backdrop="false" data-keyboard="true" class="btn btn-primary"
-                onclick="$('#clients-form').html(' ').load('<%= new_client_path%>');">Add Product
+        <%= render :partial => "devise/registrations/modal_form" %>
+         <button data-controls-modal="modal-form-users" data-backdrop="false" data-keyboard="true" class="btn btn-primary"
+                onclick="$('#clients-form').html(' ').load('<= new_user_path%>');">Agregar Cliente
         </button>
       </div>
       <div class="span" style="color: #999; font-size: 2em;"> | </div>
       <div class="span" style="color: #999; font-size: 2em;">
-        <a rel="nofollow" data-method="delete" href="/clients/sign_out">Salir</a>
+        <a rel="nofollow" data-method="delete" href="/users/sign_out">Salir</a>
       </div>
     </div>
 </div>

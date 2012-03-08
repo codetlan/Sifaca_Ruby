@@ -1,13 +1,13 @@
 module ApplicationHelper
   def resource_name
-    :client
+     :user
   end
 
   def resource
-    @resource ||= Client.new
+    @resource ||= User.new
   end
 
-  def devise_mapping
-    @devise_mapping ||= Devise.mappings[:clients]
-  end
+  #def devise_mapping
+  #  @devise_mapping ||= Devise.mappings[:users]
+  #end
 end

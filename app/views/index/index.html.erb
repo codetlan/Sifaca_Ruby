@@ -1,9 +1,11 @@
 <%= render :partial => "shared/tbar_index" %>
 <div id="user_nav">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-  <% if client_signed_in? %>
+  <% if user_signed_in? %>
 
-      <%= link_to "Sign out", destroy_client_session_path, :method => :delete %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
       <div id="error" style="left: 50%; margin-left: -258px; padding: 0; position: absolute;"></div>
       <div style="width: 900px; margin: 0 auto; padding: 100px 0;">

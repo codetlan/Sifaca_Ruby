@@ -1,7 +1,9 @@
 Sifaca::Application.routes.draw do
-  get "index/index"
+  devise_for :users
 
-  devise_for :clients
+  resources :clients
+
+  #get "index/index"
 
   resources :resumes
 
@@ -11,9 +13,9 @@ Sifaca::Application.routes.draw do
 
   resources :folios
 
-  resources :clients
 
-  match "devise/sessions#new", :to => 'index#index'
+
+  #match "devise/sessions#new", :to => 'index#index'
 
   root :to => 'index#index'
 
@@ -26,7 +28,6 @@ Sifaca::Application.routes.draw do
 
   # Sample of named route:
    match 'index/dashboard' => 'index#dashboard', :as => :dashboard
-   match 'clients/form_user' => 'clients#form_user', :as => :form_user
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
