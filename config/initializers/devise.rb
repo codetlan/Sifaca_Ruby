@@ -85,7 +85,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "f9b8ba3c368209d6740dd47ec9e5fc89e5982b446e07680aa2dc993871c58d8a4dd6dba4cae35d29cea1eaf03b1bda0246befc109904c2299bac5cf9c5960306"
+  # config.pepper = "9e140855488dfc888fb88b0dc396e5db420cd8236b65f3fa235196791d80a434abc1afd4bd0762b34626d1fa24b88d1c7f6bfb88ae0b0fff42b59f18a77908c5"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -202,7 +202,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  config.navigational_formats = ["*/*", :html,:json]
+  # config.navigational_formats = ["*/*", :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
